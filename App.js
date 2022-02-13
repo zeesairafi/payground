@@ -8,10 +8,11 @@ export default function App() {
     <View style={styles.container}>
       
       <Home/>
-      <Button onPress={() => alert("DONE")}>HELLO</Button>
+      
     </View>
-    </NativeBaseProvider>
    
+   
+    </NativeBaseProvider>
   );
 }
 
