@@ -1,6 +1,7 @@
 import { Button, NativeBaseProvider } from 'native-base';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import Home from './component/Home';
+import ShopList from './Shop/index'
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
     <View >
       
       <Home/>
-      
+      {/* <ShopList/> */}
     </View>
    
    

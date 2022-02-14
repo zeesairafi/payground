@@ -5,7 +5,7 @@ import ShopItem from "./ShopItem"
 import { observer } from 'mobx-react'
 
 
-const ShopItem = () => {
+const ShopList = () => {
     const shopList = shopStore.shops.map((shop) => (
         <ShopItem key={shop._id} shop={shop}/>
     )) 
@@ -17,4 +17,4 @@ const ShopItem = () => {
   )
 }
 
-export default observer (ShopItem)
+export default observer (ShopList)
