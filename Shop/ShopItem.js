@@ -1,14 +1,16 @@
 
 import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react'
+import { HStack } from 'native-base';
 
 
 const ShopItem = ({shop}) => {
   return (
-    <View>
+    <HStack w="100%" justifyContent="space-between" alignItems="center">  
       <Text>{shop.name}</Text>
-      <Image source={{uri: shop.image}} style={{height: 250, width: 250}}/>
-    </View>
+      <Image source={{uri: baseURL + shop.image}} style={styles.Image}/>
+    <Text mx="2">{shop.name}</Text>
+    </HStack>
   )
 }
 
