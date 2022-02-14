@@ -5,7 +5,7 @@ import Home from './component/Home';
 export default function App() {
   return (
     <NativeBaseProvider>
-    <View style={styles.container}>
+    <View >
       
       <Home/>
       
