@@ -1,20 +1,14 @@
-import { Button, NativeBaseProvider } from 'native-base';
-import { View } from 'react-native';
-import Home from './component/Home/Home';
-import ShopList from './Shop/index'
-import ShopItem from './Shop/ShopItem';
+import { NativeBaseProvider } from "native-base";
+import StackNavigator from "./component/Navigation/StackNavigator";
+import { NavigationContainer } from "@react-navigation/native"
 
 export default function App() {
   return (
-    <NativeBaseProvider>
-   
-      
-      <Home/>
-      <ShopList/>
-    
-  
-   
-    </NativeBaseProvider>
+   <NavigationContainer>
+     <NativeBaseProvider>
+       <StackNavigator/>
+     </NativeBaseProvider>
+   </NavigationContainer>
   );
 }
 

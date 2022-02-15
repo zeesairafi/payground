@@ -1,14 +1,17 @@
-
-import { Button } from 'native-base'
+import {createStackNavigator} from "@react-navigation/stack"
 import React from 'react'
-import Home from './Home/Home'
-import ShopDetail from './ShopDetail'
+
+//Components
+import Home from "../Home"
+import ShopDetail from '../Shop/ShopDetail'
 import ShopList from './ShopList'
+import CartCreation from '../Cart/CartIcon'
  
 const StackNavigator = () => {
     const {Navigator, Screen} = createStackNavigator()
   return (
-   <Navigator initialRouteName="Home" >
+
+ <Navigator initialRouteName="Home" >
        <Screen name="Home" component ={Home} options={{
            headerShown: false
        }}/>
@@ -25,4 +28,8 @@ const StackNavigator = () => {
 }
 
 export default StackNavigator
+
+{/* <Navigator screenOptions={{"h"}}>
+    <Screen name="h"component={Home} options={{title: "h"}}></Screen>
+</Navigator> */}
 
