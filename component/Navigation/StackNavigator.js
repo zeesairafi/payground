@@ -21,7 +21,10 @@ const StackNavigator = () => {
             backgroundColor: "grey",
         }
        }}/>
-       <Screen name="ShopDetail" component={ShopDetail} options={({ route }) => ({ title: route.params.shop.name, headerRight: <Button>Hello</Button>,})}/>
+       <Screen name="ShopDetail" 
+       component={ShopDetail} 
+       options={({ route }) => ({ title: route.params.shop.name, 
+       headerRight: () => <CartIcon/> })}/>
 
    </Navigator>
   )
