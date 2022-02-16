@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const ProductItem = ({product}) => {
+const index = () => {
   return (
-    <View>
-      <Text>{product.name}]</Text>
-    </View>
+    <SafeAreaView>
+        <Spinner/>
+        </SafeAreaView>
   )
 }
 
-export default ProductItem
+export default index
 
 const styles = StyleSheet.create({})

@@ -1,17 +1,17 @@
 import { makeAutoObservable } from "mobx";
 import api from "./api";
 
-class ShopStore {
+class CartStore {
   constructor() {
     makeAutoObservable(this);
   }
-  shops = [];
+  items = [];
   loading = true;
 
   fetchShops = async () => {
     try {
-      const res = await api.get("/shops");
-      this.shops = res.data;
+      const res = await api.get("/items");
+      this.items = res.data;
       this.loading = false;
     } catch (error) {
       console.log(
@@ -22,7 +22,7 @@ class ShopStore {
   };
 }
 
-const shopStore = new ShopStore();
-shopStore.fetchShops();
+const cartStore = new CartStore();
+cartStore.fetchShops();
 
-export default shopStore;
+export default cartStore;

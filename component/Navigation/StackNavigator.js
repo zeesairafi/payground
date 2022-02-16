@@ -5,7 +5,7 @@ import React from 'react'
 import Home from "../Home"
 import ShopDetail from '../Shop/ShopDetail'
 import ShopList from './ShopList'
-import CartCreation from '../Cart/CartIcon'
+import CartIcon from './Cart'
  
 const StackNavigator = () => {
     const {Navigator, Screen} = createStackNavigator()

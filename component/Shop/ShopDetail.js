@@ -1,14 +1,19 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, SafeAreaView, Text, View } from 'react-native'
 import React from 'react'
 import shopStore from '../../sores/shopeStore'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { observer } from 'mobx-react-lite'
+import { observer } from 'mobx-react'
 import { Button, HStack } from 'native-base'
+import ProductList from '../Product/ProductList'
+import styles from './styles'
+
+
 
 const ShopDetail = ({ navigation,route }) => {
-  if(shopStore.loading) return <loading/>
+  if(shopStore.loading) return <Loading/>
     const shop = route.params.shop
     const types = shop.type.map((item) => <Text key={item}>{item}</Text>)
+    
   
   return (
       <SafeAreaView>
