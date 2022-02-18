@@ -1,3 +1,5 @@
+import { StyleSheet } from "react-native";
+
 const styles = StyleSheet.create({
     typeTag: {
         padding: 50,
@@ -14,7 +16,7 @@ const styles = StyleSheet.create({
     },
     title: {
         color: "#000",
-        fontsize: 25,
+        fontSize: 25,
         textAlign: "center",
     },
 })

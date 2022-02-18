@@ -5,14 +5,15 @@ import { baseURL } from '../../sores/api';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-const ShopItem = ({ navigation,shop }) => {
+const ShopItem = ({ navigation, shop }) => {
+  console.log(" baseURL + shop.image",  baseURL + shop.image)
   return (
-    <SafeAreaView style={{ flex: 1, flexDirection:"column", margin:"50"}}>
+    <SafeAreaView style={{ flex: 1, flexDirection:"column", margin:"50px"}}>
       <Pressable
       onPress={() => navigation.navigate("ShopDetail", { shop: shop })}>
         {/* shop: shop => data from props */}
 
-      <Image source={{uri: baseURL + shop.image}} style={styles.shopImage}/>
+      <Image source={{uri: shop.image}} style={styles.shopImage}/>
     <Text mx="2">{shop.name}</Text>
     
     </Pressable>

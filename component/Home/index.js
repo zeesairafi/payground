@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import React from 'react'
 import { Button } from 'native-base'
 
-// import Home from './Home'
 
 
 const Home = () => {
@@ -22,12 +21,13 @@ const Home = () => {
     </View>
     <Button >Button</Button>
   </ImageBackground>
+  
   )}
 
 export default Home
 
 const styles = StyleSheet.create({
     background: { flex: 1, width: '100%', height: '100%' },
-    title: { color: '#000', fontSize: '38px', textAlign: 'center' },
+    title: { color: '#000', fontSize: 38, textAlign: 'center' },
     titleView: { height: '40%', alignItems: 'center', justifyContent: 'center' }
 })

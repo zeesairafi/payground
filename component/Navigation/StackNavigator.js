@@ -4,22 +4,29 @@ import React from 'react'
 //Components
 import Home from "../Home"
 import ShopDetail from '../Shop/ShopDetail'
-import ShopList from './ShopList'
-import CartIcon from './Cart'
+import ShopList from '../Shop/ShopList'
+import CartIcon from '../Cart/CartIcon'
  
 const StackNavigator = () => {
     const {Navigator, Screen} = createStackNavigator()
+ console.log(Navigator)
   return (
 
- <Navigator initialRouteName="Home" >
+ <Navigator initialRouteName="Home"
+ screenOptions={{
+     headerStyle: { 
+         backgroundColor: "blue",
+
+     },
+     headerTintColor: "white",
+ }} >
        <Screen name="Home" component ={Home} options={{
            headerShown: false
        }}/>
        <Screen name="Shops" component={ShopList}
        options={{
-        headerStyle: {
-            backgroundColor: "grey",
-        }
+        headerStyle: "All Shops"
+        
        }}/>
        <Screen name="ShopDetail" 
        component={ShopDetail} 
