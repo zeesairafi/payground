@@ -1,7 +1,9 @@
 import React from 'react';
 import { Center, VStack } from 'native-base';
-import cartStore from '../stores/cartStore';
+import cartStore from '../../sores/cartStore';
 import CartItem from './CartItem';
+
+
 const CartList = () => {
   const cartList = cartStore.items.map((item) => (
     <CartItem item={item} key={item.product._id} />
